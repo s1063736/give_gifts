@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(179, 179, 179);
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .main {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+body .main .spark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+body .main .team {
+  width: 100%;
+  height: 25%;
+  background: url(../img/tree.png) repeat-x 0 35%/20%, linear-gradient(to bottom, #202938 0%, #4d648d 70%, #536e9c 80%, #fff 82%, #fff 90%, #d4d4d4 100%);
+  overflow: hidden;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .main .team .bg {
+  position: absolute;
+  left: 0%;
+  width: 200%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  transition: 0.5s;
+}
+body .main .team .bg .moon {
+  position: absolute;
+  top: 30px;
+  left: 45%;
+  translate: 0% -50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #fffacc;
+  background: url(../img/moon.png) no-repeat center/contain;
+  animation: snownmanShake 2s infinite;
+}
+body .main .team .bg .chimney {
+  position: absolute;
+  right: 0%;
+  top: 20px;
+  width: 210px;
+  height: 190px;
+  background-color: rgba(112, 82, 47, 0.6705882353);
+  background: url(../img/house1.png) no-repeat center/contain;
+}
+body .main .team .bg .grounds {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(73, 92, 124, 0) 80%, #fff 82%, #fff 90%, #d4d4d4 100%);
+}
+body .main .team .bg .snowman1, body .main .team .bg .snowman2 {
+  position: absolute;
+  left: 83.3333333333vw;
+  width: 100px;
+  height: 120px;
+  margin-top: 80px;
+  background: url(../img/snowman.png) no-repeat center/contain;
+  transform-origin: 50% 100%;
+  animation: snownmanShake 2s infinite;
+}
+body .main .team .bg .snowman2 {
+  left: 166.6666666667vw;
+}
+body .main .team .sleigh {
+  position: absolute;
+  left: 80px;
+  width: 300px;
+  height: 170px;
+  margin-top: 40px;
+  background: url(../img/sleigh1.png) no-repeat center/contain;
+  filter: drop-shadow(-8px 2px 0 rgba(0, 0, 0, 0.3019607843));
+  transition: 0.3s;
+}
+body .main .team .man {
+  position: absolute;
+  left: 16.6666666667vw;
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+  background: url(../img/team1-2.png) no-repeat center/contain;
+  filter: drop-shadow(-8px 2px 0 rgba(0, 0, 0, 0.3019607843));
+  transition: 0.3s;
+  transform-origin: 50% 100%;
+  animation: man 4s infinite;
+}
+body .main .team2 .bg .snowman1 {
+  left: 50vw;
+}
+body .main .team2 .bg .snowman2 {
+  left: 66.6666666667vw;
+}
+body .main .team2 .sleigh {
+  background-image: url(../img/sleigh2.png);
+}
+body .main .team2 .man {
+  background-image: url(../img/team2-2.png);
+}
+body .main .team3 .bg .snowman1 {
+  left: 83.3333333333vw;
+}
+body .main .team3 .bg .snowman2 {
+  left: 116.6666666667vw;
+}
+body .main .team3 .sleigh {
+  background-image: url(../img/sleigh3.png);
+}
+body .main .team3 .man {
+  background-image: url(../img/team3-2.png);
+}
+body .main .team4 .bg .snowman1 {
+  left: 66.6666666667vw;
+}
+body .main .team4 .bg .snowman2 {
+  left: 116.6666666667vw;
+}
+body .main .team4 .sleigh {
+  background-image: url(../img/sleigh4.png);
+}
+body .main .team4 .man {
+  background-image: url(../img/team4-2.png);
+}
+body .main .circle {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0%;
+  width: 900px;
+  height: 900px;
+  overflow: hidden;
+  background: url(../img/circle.png) no-repeat center/contain;
+}
+body .main .circle .steps {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  rotate: 0deg;
+}
+body .main .circle .steps .step {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 50% 50%);
+          clip-path: polygon(30% 0%, 70% 0%, 50% 50%);
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 600;
+  font-size: 150px;
+  line-height: 200px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  text-shadow: #d16565 5px 5px 0px;
+  -webkit-text-stroke: 2px #d16565;
+}
+body .main .circle .steps .step:nth-child(1) {
+  transform: rotate(0deg);
+}
+body .main .circle .steps .step:nth-child(2) {
+  transform: rotate(45deg);
+}
+body .main .circle .steps .step:nth-child(3) {
+  transform: rotate(90deg);
+}
+body .main .circle .steps .step:nth-child(4) {
+  transform: rotate(135deg);
+}
+body .main .circle .steps .step:nth-child(5) {
+  transform: rotate(180deg);
+}
+body .main .circle .steps .step:nth-child(6) {
+  transform: rotate(225deg);
+}
+body .main .circle .steps .step:nth-child(7) {
+  transform: rotate(270deg);
+}
+body .main .circle .steps .step:nth-child(8) {
+  transform: rotate(315deg);
+}
+body .main .popbtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vw;
+  cursor: pointer;
+}
+body .poppage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: none;
+}
+body .poppage .gamewrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 70%;
+  height: 70%;
+  background: url(../img/board.png) no-repeat center/contain;
+  filter: drop-shadow(0 8px 20px rgba(19, 27, 20, 0.3058823529));
+  display: none;
+}
+body .poppage .gamewrap .game {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+body .poppage .gamewrap .game::before {
+  position: absolute;
+  content: "";
+  right: 80px;
+  bottom: 30px;
+  width: 50%;
+  height: 40%;
+  background: url(../img/christmastree.png) no-repeat right center/contain;
+  filter: drop-shadow(5px 0 0 #fff), drop-shadow(0 5px 0 #fff), drop-shadow(-5px 0 0 #fff), drop-shadow(0 -5px 0 #fff);
+}
+body .poppage .gamewrap .game p, body .poppage .gamewrap .game input {
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 600;
+  font-size: 100px;
+  letter-spacing: 10px;
+  line-height: 100px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -90px;
+  color: #fff;
+}
+body .poppage .gamewrap .game input {
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  margin-top: -90px;
+}
+body .poppage .gamewrap .game p::after {
+  position: absolute;
+  content: "";
+  top: 52%;
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+body .poppage .gamewrap .game:not(:nth-child(1)) {
+  display: none;
+}
+body .poppage .gamewrap .game1 p:nth-of-type(1)::after, body .poppage .gamewrap .game1 p:nth-of-type(3)::after, body .poppage .gamewrap .game1 p:nth-of-type(5)::after, body .poppage .gamewrap .game1 p:nth-of-type(7)::after, body .poppage .gamewrap .game1 p:nth-of-type(9)::after {
+  display: none;
+}
+body .poppage .gamewrap .game2::before {
+  background-image: url(../img/santa.png);
+}
+body .poppage .gamewrap .game2 p:nth-of-type(1)::after, body .poppage .gamewrap .game2 p:nth-of-type(4)::after, body .poppage .gamewrap .game2 p:nth-of-type(6)::after, body .poppage .gamewrap .game2 p:nth-of-type(7)::after {
+  display: none;
+}
+body .poppage .gamewrap .game3::before {
+  background-image: url(../img/deer.png);
+}
+body .poppage .gamewrap .game3 p:nth-of-type(1)::after {
+  display: none;
+}
+body .poppage .gamewrap .game3 p:nth-of-type(4)::before {
+  position: absolute;
+  content: "";
+  top: 52%;
+  right: 26.5%;
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+body .poppage .gamewrap .game4::before {
+  background-image: url(../img/sleigh.png);
+}
+body .poppage .gamewrap .game5::before {
+  background-image: url(../img/mistletoe.png);
+}
+body .poppage .gamewrap .game5 p:nth-of-type(5)::after {
+  display: none;
+}
+body .poppage .gamewrap .game6::before {
+  background-image: url(../img/candy.png);
+}
+body .poppage .gamewrap .game6 p:nth-of-type(1)::after, body .poppage .gamewrap .game6 p:nth-of-type(4)::after {
+  display: none;
+}
+body .poppage .gamewrap .game6 p:nth-of-type(5)::before {
+  position: absolute;
+  content: "";
+  top: 52%;
+  right: 21.5%;
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+body .poppage .bonus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 70%;
+  height: 70%;
+  background: url(../img/board.png) no-repeat center/contain;
+  filter: drop-shadow(0 8px 20px rgba(19, 27, 20, 0.3058823529));
+  cursor: pointer;
+  display: none;
+}
+body .poppage .bonus .text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .poppage .bonus .text p {
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 600;
+  font-size: 150px;
+  letter-spacing: 10px;
+  line-height: 150px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -90px;
+  color: #fff;
+}
+body .poppage .bonus .text div {
+  position: absolute;
+  content: "";
+  right: 80px;
+  bottom: 30px;
+  width: 50%;
+  height: 40%;
+  background: no-repeat right center/contain;
+}
+body .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+@keyframes cardHover {
+  0%, 100% {
+    transform: rotateZ(0deg) scale(1.02);
+    box-shadow: 0 0 15px #fff490, 0 0 5px #ff0000;
+  }
+  50% {
+    transform: rotateZ(5deg) scale(1.02);
+    box-shadow: 0 0 15px #fff490, 0 0 5px #ff0000;
+  }
+}
+@keyframes man {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.05);
+  }
+}
+@keyframes snownmanShake {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}/*# sourceMappingURL=style.css.map */
